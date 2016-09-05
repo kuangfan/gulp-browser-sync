@@ -48,10 +48,10 @@ gulp.task('default', [ 'scripts', 'styles', 'browser-sync'], function() {
 	gulp.watch(['./*.html','./src/js/*.js','./src/css/*.css'], browserSync.reload);
 	//监控JS代码改变
 	gulp.watch('./src/js/*.js', function() {
-    	gulp.run('jshint', 'scripts');
-  	});
+    	//gulp.run('jshint', 'scripts');
+  });
 	//监控CSS代码改变
-    gulp.watch('./src/css/*.css', function() {
-        gulp.run('styles');
-  	});
+  gulp.watch('./src/css/*.css', function() {
+      gulp.run('styles');
+	});
 });
