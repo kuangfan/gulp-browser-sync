@@ -1,98 +1,54 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-    <link rel="shortcut icon" href="src/img/favicon.ico?ver=1.1.61">
-    <link rel="icon" href="src/img/favicon.ico?ver=1.1.61">
-    <meta http-equiv="expires" content="-1">
-    <title>微信找你妹</title>
-    <link rel="stylesheet" type="text/css" href="src/css/m.min.css?v=201408011050">
-    <script>
-    var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src='';var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
-    </script>
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <title></title>
+    <meta content="max-age=3600" http-equiv="Cache-Control">
+    <meta content="240" name="MobileOptimized">
+    <meta content="YES" name="apple-touch-fullscreen">
+    <meta content="yes" name="apple-mobile-web-app-capable">    
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link href="src/css/game.css" media="all" type="text/css" rel="stylesheet">    
 </head>
 <body>
+	<div class="wrapper guide">
+		<div class="btn-guide">
+			<a href="javascript:;" class="btn1 btn-start" onclick="game.start()">开始游戏</a>
+			<a href="/game-rank.html" class="btn1 btn-rank">积分排行</a>
+			<p>
+				<a href="/sign-in.html" class="btn2 btn-qiandao">每日签到</a>
+				<a href="/game-rule.html" class="btn2 btn-rule">游戏规则</a>
+			</p>
+		</div>
+		<div class="text-guide"></div>
+	</div>
+	<div class="wrapper game">
+		<div class="game-title">			
+			<a href="/" class="btn-back"></a>
+			<p class="title-center"><span class="text-guanka"></span><strong class="misson-num">1</strong></p>
+			<a href="javascript:;" class="btn-more"></a>
+		</div>
+		<div class="game-info">
+			<div class="game-score">
+				<span class="text-defen"></span><strong class="score-num">0</strong>
+			</div>
+			<div class="game-time">
+				<span class="text-shijian"></span>
+				<div class="time-progress">
+					<span class="progress-bar"><i style="width: 0%"></i></span>
+				</div>
+			</div>			
+		</div>
+		<div class="game-box">
+			<div class="inbox"></div>
+		</div>
+	</div>
+	<div class="mask"></div>
+	<!-- <script type="text/javascript" src="src/js/jquery.js"></script>
+	<script type="text/javascript" src="src/js/viewport.js"></script>
+	<script type="text/javascript" src="src/js/global.js"></script> -->
+	<script type="text/javascript" src="src/js/jquery.js"></script>
+	<script type="text/javascript" src="dest/js/global.js"></script>
 </body>
 </html>
-<script id="tpl" type="text/html">
-<div class="grid">
-    <div class="page hide" id="loading">
-        <div class="loading-txt"><%=loading%></div>
-    </div>
-    <div class="page hide" id="index">
-        <h1><%=title%></h1>
-
-        <div id="help"><%=help_txt%></div>
-        <div class="btns">
-            <button data-type="color" class="btn play-btn">
-                <%=btn_start%>
-            </button>
-        </div>
-    </div>
-    <div class="page hide" id="room">
-        <header>
-            <span class="lv">
-                <%=score%>
-                <em>
-                    1
-                </em>
-            </span>
-            <span class="time">
-            </span>
-            <span class="btn btn-pause">
-                <%=btn_pause%>
-            </span>
-        </header>
-        <div id="box" class="lv1">
-        </div>
-    </div>
-    <div class="page hide" id="dialog">
- 		<div id="share-wx" style="">
- 			<p style="text-align: right; padding-left: 10px;">
- 				<img src="./share.png" id="share-wx-img" style="max-width: 280px; padding-right: 25px;">
- 			</p>
- 		</div>
-        <div class="inner">
-            <div class="content gameover">
-                <div class="inner-content">
-                   
-                    <h3></h3>
-                    <div class="btn-wrap">
-                        <button class="btn btn-restart">
-                            <%=btn_reTry%>
-                        </button>
-                        <a href="" target="_blank" class="btn btn-boyaa">
-                            <%=btn_more_game%>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="content pause">
-                <div class="inner-content">
-                  
-                    <h3>
-                        <%=game_pause%>
-                    </h3>
-                    <div class="btn-wrap">
-                        <button class="btn btn-resume">
-                            <%=btn_resume%>
-                        </button>
-                        <a href="" target="_blank" class="btn btn-boyaa">
-                            <%=btn_more_game%>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
- 
-   
-</script>
-<script src="src/js/libs.min.js"></script>
-<script src="src/js/wx4syt.js"></script>
-<script src="src/js/main.min3.js?v=201408011050"></script>
- 
